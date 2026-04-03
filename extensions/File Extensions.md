@@ -8,12 +8,12 @@ Take a file name as input and return its MIME type.
 Examples: cat.gif, document.PDF, archive, photo.JpG
 
 3. Output
----------
+--------
 - MIME type (string)
 - Default if unknown: application/octet-stream
 
 4. File Extension → MIME Type Mapping
---------------------------------------
+--------
 .gif   → image/gif
 .jpg   → image/jpeg
 .jpeg  → image/jpeg
@@ -23,7 +23,7 @@ Examples: cat.gif, document.PDF, archive, photo.JpG
 .zip   → application/zip
 
 5. Steps
----------
+--------
 1. Ask user for file name
 2. Convert file name to lowercase and remove spaces
 3. Check if there is a dot (.)
@@ -34,7 +34,7 @@ Examples: cat.gif, document.PDF, archive, photo.JpG
    - If not → return default
 
 6. Examples
-------------
+--------
 File name: cat.gif    → image/gif
 File name: cat.JPG    → image/jpeg
 File name: archive    → application/octet-stream
