@@ -1,28 +1,16 @@
-Purpose:
-    Create a simple calculator that takes a user input expression 
-    (like "50 / 5") and returns the result.
+Goal:
+Evaluate a simple mathematical expression.
 
-Inputs:
-    - User enters an expression in the format:
-        <number> <operator> <number>
-      Example: 50 / 5
+Input: - Expression in format: <number> <operator> <number>
+Example: 50 / 5
 
-Process / Steps:
-    1. Input Parsing:
-        - Split the user input into three parts:
-            a -> first number
-            b -> operator (+, -, *, /)
-            c -> second number
-    2. Data Conversion:
-        - Convert a and c from string to float for calculation.
-    3. Operation Selection:
-        - Use if-elif statements to determine the operator (b)
-          and perform the corresponding calculation.
-    4. Output Result:
-        - Display the result to the user.
-    5. Error Handling:
-        - If the operator is invalid, show an error message.
+Output: - Result of calculation OR error message
 
-Outputs:
-    - The calculated result of the expression.
-      Example: Input "50 / 5" -> Output: "Result: 10.0"
+Process / Steps: 1. Receive expression from user 2. Split input into 3 parts:
+a → first number
+b → operator (+, -, _, /)
+c → second number 3. Validate input: - Ensure exactly 3 parts exist 4. Convert numbers: - Convert a and c to numeric values (float) 5. Perform operation: - + → addition - - → subtraction - _ → multiplication - / → division (check division by zero) 6. Handle errors: - Invalid operator → show error - Division by zero → show error - Invalid format → show error 7. Return result
+
+Example:
+50 / 5 → Result: 10.0
+10 \* 3 → Result: 30.0

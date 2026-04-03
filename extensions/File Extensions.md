@@ -1,40 +1,21 @@
-1. Goal
---------
-Take a file name as input and return its MIME type.
+Goal:
+Determine the MIME type of a file based on its extension.
 
-2. Input
---------
-- File name (string)
+Input: - File name (string)
 Examples: cat.gif, document.PDF, archive, photo.JpG
 
-3. Output
----------
-- MIME type (string)
-- Default if unknown: application/octet-stream
+Output: - MIME type (string) - Default: application/octet-stream
 
-4. File Extension → MIME Type Mapping
---------------------------------------
-.gif   → image/gif
-.jpg   → image/jpeg
-.jpeg  → image/jpeg
-.png   → image/png
-.pdf   → application/pdf
-.txt   → text/plain
-.zip   → application/zip
+Process / Steps: 1. Receive file name from user 2. Normalize input: - Remove leading/trailing spaces - Convert to lowercase 3. Check if file contains a dot (.) - If not → return default MIME type 4. Extract extension: - Take substring after the last dot 5. Match extension using mapping:
+gif → image/gif
+jpg → image/jpeg
+jpeg → image/jpeg
+png → image/png
+pdf → application/pdf
+txt → text/plain
+zip → application/zip 6. Return result: - If match found → return MIME type - Otherwise → return default
 
-5. Steps
----------
-1. Ask user for file name
-2. Convert file name to lowercase and remove spaces
-3. Check if there is a dot (.)
-   - If no dot → return default
-4. Take text after last dot as extension
-5. Look up extension in mapping
-   - If found → return MIME type
-   - If not → return default
-
-6. Examples
-------------
-File name: cat.gif    → image/gif
-File name: cat.JPG    → image/jpeg
-File name: archive    → application/octet-stream
+Example:
+cat.gif → image/gif
+cat.JPG → image/jpeg
+archive → application/octet-stream
